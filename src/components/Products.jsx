@@ -25,7 +25,7 @@ const Products = () => {
   useEffect(() => {
     const getProducts = async () => {
       setLoading(true);
-      const response = await fetch("http://localhost:5000/products");
+      const response = await fetch("https://fakestoreapi.com/products"); //I have changed it to fakeapi link, coz my database is on my desktop. 
       if (isMountedRef.current) {
         setData(await response.clone().json());
         setFilter(await response.json());
